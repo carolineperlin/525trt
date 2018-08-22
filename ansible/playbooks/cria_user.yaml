@@ -1,0 +1,29 @@
+---
+- name: criando usuarios
+  hosts: docker devops
+  tasks: 
+   - name: criando usuario carol
+     user: 
+       name: carol
+       shell: /bin/bash
+       password: '$1$LBPgOWN9$wRq/YCzrPDqD3IcakBtYT.'
+       state: present
+   - name: criando usuario perlin
+     user:
+       name: perlin
+       shell: /bin/bash
+       password: '$1$LBPgOWN9$wRq/YCzrPDqD3IcakBtYT.'
+       state: present
+   - name: instalando cowsay
+     package: 
+       name: cowsay
+       state: present
+   - name: instalando vim
+     package:
+       name: vim
+       state: present
+   - name: instalando htop
+     package:
+       name: htop
+       state: present
+

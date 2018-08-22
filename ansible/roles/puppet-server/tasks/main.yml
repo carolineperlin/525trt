@@ -1,0 +1,5 @@
+- name: copiando o repositorio
+  include: repositorio.yaml
+
+- name: instalando o pacote
+  include: install.yaml

@@ -1,0 +1,4 @@
+- name: adiconando repositorio
+  apt_repository:
+    repo: deb 
+    state: present

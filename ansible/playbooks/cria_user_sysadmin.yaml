@@ -1,0 +1,11 @@
+---
+- name: criando usuarios
+  hosts: all
+  vars:
+    - username: sysadmin
+  tasks: 
+   - name: criando usuarios
+     user: 
+       name: '{{username}}' 
+       shell: /bin/bash
+       state: present

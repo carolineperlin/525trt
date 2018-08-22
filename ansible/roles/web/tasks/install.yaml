@@ -1,0 +1,9 @@
+- name: instalando aplicativos
+  package: 
+    name: "{{ item }}"
+    state: present
+  with_items: 
+    - apache2
+    - vim
+    - htop
+    - sysstat

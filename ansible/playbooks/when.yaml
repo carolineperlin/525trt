@@ -1,0 +1,16 @@
+--- 
+- name: exemplo de operador condicional
+  hosts: all
+  tasks:
+   - name: criando arquivo dexter
+     file:
+      path: /etc/profile.d/dexter
+      state: touch
+   - name: testando se o arquivo profile existe
+     shell: test -f /etc/profile.d/dexter
+     register: result
+     ignore_errors: yes
+
+   - name: configurando a variavel dexter 
+     shell: echo export DEXTER=/opt/dexter > /etc/profile.d/dexter
+     when: result.rc == 0

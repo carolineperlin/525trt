@@ -1,0 +1,8 @@
+- name: index.html
+  vars:
+    maquina: "{{ansible_hostname}}"
+    ip: "{{ansible_default_ipv4[0]}}"
+    distro: "{{ansible_distribution_file_variety}}"
+  copy: 
+    src: index.html
+    dest: /var/www/html/ 

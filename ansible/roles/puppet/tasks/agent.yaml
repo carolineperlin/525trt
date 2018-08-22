@@ -1,0 +1,14 @@
+- name: instalando em Debian
+  apt:
+    deb: https://apt.puppetlabs.com/puppet5-release-xenial.deb 
+  when: ansible_os_family == "Debian"
+
+- name: instalando em CentOS
+  yum:
+    name: https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+  when: ansible_os_family == "RedHat"
+
+- name: instalando o agent
+  package: 
+    name: puppet-agent
+    update_cache: yes

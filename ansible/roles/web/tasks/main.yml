@@ -1,0 +1,8 @@
+- name: instalando programas
+  include: install.yaml
+
+- name: criando usuarios
+  include: create_users.yaml
+
+- name: cria index
+  include: index.yaml

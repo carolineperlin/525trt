@@ -1,0 +1,14 @@
+---
+- name: minha primeira playbook
+  hosts: docker devops
+  tasks: 
+   - name: criando usuario devops
+     user: 
+       name: devops
+       shell: /bin/bash
+       password: '$1$LBPgOWN9$wRq/YCzrPDqD3IcakBtYT.'
+       state: present
+   - name: removendo o cowsay
+     package: 
+      name: cowsay
+      state: absent

@@ -1,0 +1,7 @@
+- name: criando o index.html
+  shell: echo ola mundo > /var/www/html/index.html
+
+- name: copiando o arquivo de configuracao wp-config
+  copy:
+   src: templates/wp-config
+   dest: /var/www/html/wp-config

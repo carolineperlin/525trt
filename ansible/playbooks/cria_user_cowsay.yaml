@@ -1,0 +1,22 @@
+---
+- name: criando usuarios
+  hosts: all
+  tasks: 
+   - name: criando usuarios
+     user: 
+       name: '{{item}}' 
+       shell: /bin/bash
+       state: present
+       with_items: 
+         - carol
+         - perlin
+         - roliveira
+   - name: instalando programas
+     package: 
+       name: '{{item}}'
+       state: present
+       with_items: 
+        - vim
+        - htop
+        - cowsay
+

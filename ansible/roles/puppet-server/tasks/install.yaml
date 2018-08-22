@@ -1,0 +1,4 @@
+- name: instalando aplicativos
+  package: 
+    name: puppetserver
+    state: present

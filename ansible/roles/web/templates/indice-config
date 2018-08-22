@@ -1,0 +1,13 @@
+<html>
+<body>
+<marquee>
+<h1> 
+nome da maquina: {{maquina}}
+<br>
+ip da maquina: {{ip}}
+<br>
+distro da maquina: {{distro}}
+</h1> 
+</marquee>
+</body>
+</html>

@@ -1,0 +1,5 @@
+--- 
+- name: instalando o apache
+  hosts: docker devops
+  roles:
+   - web
